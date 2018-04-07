@@ -1,0 +1,17 @@
+{
+    "name": "ozinclouds/wpdevdash",
+    "description":"Wordpress Development Dashboard for localhosts",
+    "type":"project",
+    "lincense":"MIT",
+    "authors": [
+        {
+            "name": "ozgurkalan",
+            "email": "ozgurkalan@gmail.com"
+        }
+    ],
+    "require": {
+        "erusev/parsedown": "^1.6",
+        "vlucas/phpdotenv": "^2.4",
+        "mcaskill/php-array-group-by": "^1.0"
+    }
+}

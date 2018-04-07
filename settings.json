@@ -1,0 +1,58 @@
+{
+    "menu":[
+    	        	{
+    	        	"icon": "fa fa-info-circle",
+    	        	"key": "_1",
+		"title": "intro",
+		"data": {"url": "index.php"}
+    	        	},
+
+    	        	{
+    	        	"icon":"fa fa-gears",
+    	        	"key":"_2",
+    	        	"title":"system",
+    	        	"data":{"url":"inc/system.php"}
+    	        	},
+
+    	        	{
+    	        	"icon":"fa fa-download",
+    	        	"key":"_3",
+    	        	"title":"update",
+    	        	"data":{"url":"inc/update.php"}
+    	        	},
+
+    	        	{
+    	        	"icon":"fa fa-bookmark",
+    	        	"key":"_4",
+    	        	"title":"defaults",
+    	        	"data":{"url":"inc/defaults.php"}
+    	        	},
+
+    	        	{
+    	        	"icon":"fa fa-wordpress",
+    	        	"key":"_5",
+    	        	"title":"new WP",
+    	        	"data":{"url":"inc/newwp.php"}
+
+    	        	},
+
+    	        	{
+    	        	"icon":"fa fa-edit",
+    	        	"key":"_6",
+    	        	"title":"edit WP",
+    	        	"data":{"url":"inc/editwp.php"}
+
+    	        	},
+
+    	        	{
+    	        	"icon":"fa fa-briefcase",
+    	        	"key":"_7",
+    	        	"title":"tmp",
+    	        	"data":{"url":"inc/tmp.php"}
+
+    	        	}
+
+
+           ]
+}
+

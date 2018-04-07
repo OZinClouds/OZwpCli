@@ -1,0 +1,210 @@
+$palet-colors : (
+	
+		red-gray: (
+
+			'mainNav-bg-color' : $red,
+			'mainNav-color': white,
+			'mainNav-a': white,
+			
+			'sidenav-toggler-bg-color': $red,
+			'sidenav-toggler-a': white,
+			
+			'sidebar-bg-color': $gray-700,
+			'sidebar-a': white,
+			'sidebar-a-hover': $red,
+			
+			'navbar-toggler-color': white,
+
+			'content-color': black,
+			
+			'footer-bg-color': $gray-300,
+			'footer-a': $gray-600,
+			'footer-a-hover': red,
+			
+			),
+
+		 green-gray: (
+
+			'mainNav-bg-color' : desaturate($green, 30),
+			'mainNav-color': white,
+			'mainNav-a': white,
+			
+			'sidenav-toggler-bg-color': desaturate($green, 30),
+			'sidenav-toggler-a': white,
+			
+			'sidebar-bg-color': adjust-hue($gray-400, 40),
+			'sidebar-a': darken(white, 80),
+			'sidebar-a-hover': $red,
+			
+			'navbar-toggler-color': white,
+
+			'content-color': black,
+			
+			'footer-bg-color': adjust-hue($gray-300, 40),
+			'footer-a': $gray-600,
+			'footer-a-hover': $red,
+			
+			), 
+
+		 cyan-gray: (
+
+			'mainNav-bg-color' : desaturate($cyan, 25),
+			'mainNav-color': white,
+			'mainNav-a': white,
+			
+			'sidenav-toggler-bg-color': desaturate($cyan, 25),
+			'sidenav-toggler-a': white,
+			
+			'sidebar-bg-color': lighten($gray-800, 25), 
+			'sidebar-a': darken(white, 10),
+			'sidebar-a-hover': darken($red, 30),
+			
+			'navbar-toggler-color': white,
+
+			'content-color': black,
+			
+			'footer-bg-color': $gray-400,
+			'footer-a': $gray-700,
+			'footer-a-hover': $red,
+			
+			), 
+		  yellow-gray: (
+
+		 	'mainNav-bg-color' : desaturate($yellow, 25),
+		 	'mainNav-color': white,
+		 	'mainNav-a': white,
+		 	
+		 	'sidenav-toggler-bg-color': desaturate($yellow, 25),
+		 	'sidenav-toggler-a': white,
+		 	
+		 	'sidebar-bg-color': adjust-hue($gray-600, 25), 
+		 	'sidebar-a': darken(white, 10),
+		 	'sidebar-a-hover': darken($red, 30),
+		 	
+		 	'navbar-toggler-color': white,
+
+		 	'content-color': black,
+		 	
+		 	'footer-bg-color': adjust-hue( $gray-400, 35),
+		 	'footer-a': $gray-700,
+		 	'footer-a-hover': $red,
+		 	
+		 	), 
+		 tomato-gray: (
+
+			'mainNav-bg-color' : tomato,
+			'mainNav-color': white,
+			'mainNav-a': white,
+			
+			'sidenav-toggler-bg-color': tomato,
+			'sidenav-toggler-a': white,
+			
+			'sidebar-bg-color': lighten($gray-700, 25),
+			'sidebar-a': darken(white, 10),
+			'sidebar-a-hover': darken($red, 30),
+			
+			'navbar-toggler-color': white,
+
+			'content-color': black,
+			
+			'footer-bg-color': lighten( $gray-600, 20),
+			'footer-a': $gray-700,
+			'footer-a-hover': $red,
+			
+			),
+
+
+	);
+
+@function getPalet($palet, $which){
+	@if not ( map-has-key($palet-colors, $palet) ) {$palet:'oz';}
+	$base: map-get($palet-colors, $palet);
+	@return map-get($base, $which);
+}
+
+
+
+
+@mixin navColors($name){
+	@if ( map-has-key($palet-colors, $name) ) {
+.palet-#{$name} {
+	background-color:getPalet($name,'mainNav-bg-color');
+	color: getPalet($name,'mainNav-color');
+	
+	.content-wrapper{
+		color:getPalet($name,'content-color');
+	}
+
+	#mainNav {
+		a{
+			color:getPalet($name,'mainNav-a');
+		}
+	}
+
+	.navbar-toggler{
+
+		color:getPalet($name,'navbar-toggler-color');
+	}
+
+	.sidenav-toggler {
+			background-color: getPalet($name,'sidenav-toggler-bg-color');
+			a {
+				i {
+				  color: getPalet($name,'sidenav-toggler-a');
+				}
+
+			}
+
+	}
+
+	#menu {
+		background-color: getPalet($name,'sidebar-bg-color');
+	
+		li {
+			a {
+				color: getPalet($name,'sidebar-a');
+
+				& :hover {
+					color:getPalet($name,'sidebar-a-hover');
+				}
+				&.active {
+					color:getPalet($name,'sidebar-a-hover');
+				}
+			}
+
+		}
+
+		.nav-link-collapse:after {
+				color: $gray-600;
+			}
+	}
+
+
+	.sticky-footer {
+		background-color: getPalet($name,'footer-bg-color');
+		a {
+			color:getPalet($name,'footer-a');
+			text-decoration:none;
+			& :hover {
+				
+				color: getPalet($name,'footer-a-hover');
+
+			}
+		}
+	}
+}
+
+ @media (max-width: 992px) {
+	@extend .palet-oz;
+ }
+ 	}
+}
+
+
+@each $palet in $palet_colors {
+	@include navColors(
+		#{nth($palet, 1)}
+		);
+
+	}
+

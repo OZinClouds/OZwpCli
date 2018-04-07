@@ -1,0 +1,333 @@
+{
+    "options": [
+        {
+            "title": "WPLANG",
+            "group": "basic",
+            "desc": "Settings > General > Site Language",
+            "comment": "defines the language of WP site. en_EN is empty default.",
+            "default": "tr_TR"
+        },
+        {
+            "title": "gmt_offset",
+            "group": "basic",
+            "desc": "Settings > General > Timezone ",
+            "comment": "WP default: UTC+0",
+            "default": 3
+        },
+        {
+            "title": "start_of_week",
+            "group": "basic",
+            "desc": "Settings > General > Week Starts On ",
+            "comment": "WP default: 1  (Monday) // 0-6 ",
+            "default": 1
+        },
+        {
+            "title": "date_format",
+            "group": "basic",
+            "desc": "Settings > General > Date Format ",
+            "comment": "WP default: F J, Y",
+            "default": "d/m/Y"
+        },
+        {
+            "title": "time_format",
+            "group": "basic",
+            "desc": "Settings > General > Time Format ",
+            "comment": "WP default: g:i a",
+            "default": "H:i"
+        },
+        {
+            "title": "permalink_structure",
+            "group": "basic",
+            "desc": "Settings > Permalinks > Permalink Settings",
+            "comment": "WP default: plain",
+            "default": "/%postname%-%post_id%.htm"
+        },
+        {
+            "title": "category_base",
+            "group": "basic",
+            "desc": "Settings > Permalinks > Tag Base ",
+            "comment": "WP default is empty",
+            "default": "/konu"
+        },
+        {
+            "title": "tag_base",
+            "group": "basic",
+            "desc": "Settings > Permalinks > Category Base ",
+            "comment": "WP default is empty",
+            "default": "/etiketler"
+        },
+        {
+            "title": "uploads_use_yearmonth_folders",
+            "group": "basic",
+            "desc": "Settings > Media > Uploading Files ",
+            "comment": "WP default: 1 (Organize my uploads into month- and year-based folders)",
+            "default": 0
+        }
+    ],
+    "config": [
+        {
+            "title": "WP_LANG",
+            "group": "LANG",
+            "desc": "Config file constant defining Language",
+            "comment": "WP default is en_EN",
+            "default": "tr_TR",
+            "options":["default","en_EN","en_GB","tr_TR","de_DE"],
+    	"type":"text"
+        }
+    ],
+    "users":[
+    	{
+    		"title":"display_name",
+    		"group":"get",
+    		"desc":"Display name publicly as",
+    		"comment":"reads from .env file, if exits",
+    		"default":".env",
+    		"type":"text"
+    	},
+    	{
+    		"title":"locale",
+    		"group":"meta",
+    		"desc":"language",
+    		"comment":"admin panel language only, default is site language(blank)",
+    		"default":"en_EN",
+    		"options":["default","en_EN","en_GB","tr_TR","de_DE"],
+    		"type":"text"
+    	},
+    	{
+    		"title":"admin_color",
+    		"group":"meta",
+    		"desc":"Admin Color Scheme",
+    		"comment":"sets color, blank is default",
+    		"default":"sunrise",
+    		"options":["default","light","blue","coffee","ectoplasm","midnight","ocean","sunrise"],
+    		"type":"text"
+    	},
+    	{
+    		"title":"show_admin_bar_front",
+    		"group":"meta",
+    		"desc":"Toolbar",
+    		"comment":"Show Toolbar when viewing site",
+    		"default":"false",
+    		"type":"boolean"
+    	},
+    	{
+    		"title":"show_welcome_panel",
+    		"group":"meta",
+    		"desc":"Show welcome panel",
+    		"comment":"dashboard welcome panel",
+    		"default":"0",
+    		"options":["0","1"],
+    		"type":"text"
+    	},
+    	{
+    		"title":"description",
+    		"group":"meta",
+    		"desc":"Biographical Info",
+    		"comment":"reads from .env file, if exits",
+    		"default":".env",
+    		"type":"textarea"
+    	}
+    ],
+    "themes":[
+    	{
+        	"title":"twentyseventeen",
+        	"default":"twentyseventeen",
+        	"group":"default",
+        	"desc":"2017 WP Theme",
+        	"comment":"WP Default Theme"
+        },
+        {
+        	"title":"twentysixteen",
+        	"default":"twentysixteen",
+        	"group":"default",
+        	"desc":"2016 WP Theme",
+        	"comment":"WP Default Theme"
+        },
+        {
+        	"title":"twentyfifteen",
+        	"default":"twentyfifteen",
+        	"group":"default",
+        	"desc":"2015 WP Theme",
+        	"comment":"WP Default Theme"
+        }
+    ],
+    "plugins": [
+        {
+            "title": "akismet",
+            "default": "akismet",
+            "group": "security",
+            "desc": "protect blog from spam",
+            "comment": "needs an API key"
+        },
+        {
+            "title": "woocommerce",
+            "default": "woocommerce",
+            "group": "woo",
+            "desc": "eCommerce toolkit",
+            "comment": "standard eBiz Plugin"
+        },
+          {
+            "title": "all-in-one-seo-pack",
+            "default": "all-in-one-seo-pack",
+            "group": "seo",
+            "desc": "Out-of-the-box SEO",
+            "comment": "All-in-One, incl XLM sitemaps and custom post type seo "
+        },
+        {
+        	"title":"broken-link-checker",
+        	"default":"broken-link-checker",
+        	"group":"basic",
+        	"desc":"Checks your blog for broken links and missing images",
+        	"comment":"shows broken links in dashboard"
+        },
+        {
+        	"title":"wordfence",
+        	"default":"wordfence",
+        	"group":"security",
+        	"desc":"Anti-virus, Firewall and Malware Scan",
+        	"comment":"essential for WP security"
+        },
+        {
+        	"title":"regenerate-thumbnails",
+        	"default":"regenerate-thumbnails",
+        	"group":"image",
+        	"desc":"Regenerate the thumbnails",
+        	"comment":"Useful when changing image sizes or theme"
+        },
+        {
+        	"title":"simple-image-sizes",
+        	"default":"simple-image-sizes",
+        	"group":"image",
+        	"desc":"Add options in media setting page for images sizes",
+        	"comment":"?need to check if still useful"
+        },
+        {
+        	"title":"wordpress-importer",
+        	"default":"wordpress-importer",
+        	"group":"basic",
+        	"desc":"import many fields from a WP export file.",
+        	"comment":"good for import sandbox"
+        },
+        {
+        	"title":"wp-mail-smtp",
+        	"default":"wp-mail-smtp",
+        	"group":"mail",
+        	"desc":"Reconfigures the wp_mail() function to use SMTP",
+        	"comment":"useful for some restricted php servers..."
+        },
+        {
+        	"title":"wp-migrate-db-pro",
+        	"default":"/Users/ozgurkalan/Documents/DEVOZ/zz_OZ-APP-Paid/WP-Migrate/wp-migrate-db-pro-1.6.1.zip",
+        	"group":"database",
+        	"desc":"Export, push, and pull to migrate WP databases",
+        	"comment":"paid pro version: change 'default' to folder path!"
+        },
+        {
+        	"title":"wp-migrate-db-pro-media-files",
+        	"default":"/Users/ozgurkalan/Documents/DEVOZ/zz_OZ-APP-Paid/WP-Migrate/wp-migrate-db-pro-media-files-1.4.5.zip",
+        	"group":"database",
+        	"desc":"WP Migrate DB Pro Media Files",
+        	"comment":"An extension to WP Migrate DB Pro, allows the migration of media files."
+        },
+        {
+        	"title":"extra-user-details",
+        	"default":"extra-user-details",
+        	"group":"basic",
+        	"desc":"add additional fields to user profile like Facebook, Twitter etc.",
+        	"comment":"user social media is accesible"
+        },
+        {
+        	"title":"backwpup",
+        	"default":"backwpup",
+        	"group":"database",
+        	"desc":"WP Backup Plugin",
+        	"comment":"good for fast backup sql in uploads folders"
+        },
+        {
+        	"title":"disable-site",
+        	"default":"disable-site",
+        	"group":"basic",
+        	"desc":"disable website front-end and display a message",
+        	"comment":"fast and reliable way to keep under-construction"
+        },
+        {
+        	"title":"custom-upload-dir",
+        	"default":"custom-upload-dir",
+        	"group":"woo",
+        	"desc":"keeps uploaded files organized in smart folder structures",
+        	"comment":"good for woo product images and uploads"
+        },
+        {
+        	"title":"polylang",
+        	"default":"polylang",
+        	"group":"basic",
+        	"desc":"Adds multilingual capability",
+        	"comment":"language - multilang plugin"
+        },
+        {
+        	"title":"wck-custom-fields-and-custom-post-types-creator",
+        	"default":"wck-custom-fields-and-custom-post-types-creator",
+        	"group":"woo",
+        	"desc":"custom post types, custom taxonomies and custom fields",
+        	"comment":"very useful esp. with woo"
+        },
+        {
+        	"title":"woocommerce-products-filter",
+        	"default":"/Users/ozgurkalan/Documents/DEVOZ/zz_OZ-APP-Paid/codecanyon-11498469-woof-woocommerce-products-filter/woocommerce-products-filter.zip",
+        	"group":"woo",
+        	"desc":"wooF - wooCommerce Products Filter",
+        	"comment":"not the best, but ok for filtering, paid version has some capabilities"
+        },
+        {
+        	"title":"wp-optimize",
+        	"default":"wp-optimize",
+        	"group":"basic",
+        	"desc":"optimization plugin",
+        	"comment":"cleans up database"
+        },
+        {
+        	"title":"simple-lightbox",
+        	"default":"simple-lightbox",
+        	"group":"image",
+        	"desc":"customizable lightbox",
+        	"comment":"simple and working"
+        },
+        {
+        	"title":"relevanssi",
+        	"default":"relevanssi",
+        	"group":"woo",
+        	"desc":"replaces WP search with a relevance-sorting search",
+        	"comment":"good for custom tax search"
+        },
+        {
+        	"title":"disable-comments",
+        	"default":"disable-comments",
+        	"group":"basic",
+        	"desc":"globally disable comments",
+        	"comment":"can be disabled according to post type"
+        },
+        {
+        	"title":"contact-form-7",
+        	"default":"contact-form-7",
+        	"group":"mail",
+        	"desc":"contact form plugin",
+        	"comment":"simple and flexible"
+        },
+        {
+        	"title":"search-everything",
+        	"default":"search-everything",
+        	"group":"woo",
+        	"desc":"extra serach functionality",
+        	"comment":"good for Woo and custom tax-post searches"
+        },
+        {
+        	"title":"google-sitemap-generator",
+        	"default":"google-sitemap-generator",
+        	"group":"seo",
+        	"desc":"Google XML Sitemaps",
+        	"comment":"improves seo capabilities"
+        }
+
+
+    ]
+}
