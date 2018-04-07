@@ -9,7 +9,7 @@
  <meta name="language" content="English">
 <meta name="author" content="//github.com/ozinclouds">
 <link rel="icon" href="favicon.png">
-<title>OZinClouds / WPdevDash</title>
+<title>OZinClouds / OZwpDeV</title>
 
 <link rel="stylesheet" type="text/css" href="<?php echo siteurl;?>dist/theme.bundle.css">
 <?php OZtheme::enquee_scripts_in_header() ?>
