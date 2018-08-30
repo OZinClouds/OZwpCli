@@ -1,4 +1,4 @@
-# OZwpDeV
+# OZwpCli
 Simple Admin Panel for creating sandbox Wordpress and WP development plugs for altering admin settings using WP-CLI with PHP.
 
 ## Features
@@ -69,7 +69,7 @@ Composer dependencies are hooked in config.php. To install and create the vendor
 Installing wp-cli is well documented in its site: [wp-cli](https://wp-cli.org/#installing). If you're lucky with previous installs of npm and composer, this will run like a charm.
 
 #### wp-cli / packages
-OZwpDeV uses packages from wp-cli, which you may find the index of packages here: [wp-cli/packages](http://wp-cli.org/package-index/).
+OZwpCli uses packages from wp-cli, which you may find the index of packages here: [wp-cli/packages](http://wp-cli.org/package-index/).
 ##### wp-cli/find-command
 Find WordPress installations on the filesystem.
 ###### Installation:

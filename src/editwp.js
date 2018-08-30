@@ -32,7 +32,7 @@ $(document).ready(function(){
 		if($("#select_wp").val()!=="0"){
 			if(runWPlock($("#select_wp").val(), "status")){
 				$("#btn_del_wp").prop("disabled", true)
-				.attr("title", "you cannot delete this wp \n ozwpdev.txt must exists in the wp folder...")
+				.attr("title", "you cannot delete this wp \n ozwpcli.txt must exists in the wp folder...")
 				
 
 			}

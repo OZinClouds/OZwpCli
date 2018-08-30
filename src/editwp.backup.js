@@ -3,7 +3,7 @@ import {runDBexport} from "./run.db.export.js";
 export function swal_backup(wpPath, DBname){
 	swal({
 		title:"backup WP",
-		text: "WP backup will be both in \n OZwpDev's basedir /tmp folder and \n WP's upload/ozwpdev folder...",
+		text: "WP backup will be both in \n OZwpCli's basedir /tmp folder and \n WP's upload/OZwpCli folder...",
 		icon: "warning",
 		closeOnClickOutside: false,
 		dangerMode: true,

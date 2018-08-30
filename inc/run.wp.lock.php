@@ -11,7 +11,7 @@
 				echo "false"; die();
 			}
 
-			$sFile=rootdir.$_POST["wpName"]."/ozwpdev.txt";
+			$sFile=rootdir.$_POST["wpName"]."/ozwpcli.txt";
 
 			if($_POST["lock"]=="status"){
 				/*** get the loack status ***/
@@ -28,7 +28,7 @@
 
 				if(!file_exists($sFile)){
 				$thefile=fopen($sFile,"w");
-				fwrite($thefile, "can be modified by OZwpDev");
+				fwrite($thefile, "can be modified by OZwpCli");
 				fclose($thefile);
 				}
 				echo "true";

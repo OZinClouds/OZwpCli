@@ -5,7 +5,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin'); //sort of Live
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 ///declare proxy here
-const ProxY="http://localhost/ozwpdev";
+const ProxY="http://localhost/ozwpcli";
 
 module.exports = env => {
 

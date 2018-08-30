@@ -10,8 +10,8 @@
 	
 
 <div class="jumbotron">
-	<h1>OZwpDeV</h1>
-	<h3>Wordpress Development Environment</h3>
+	<h1>OZwpCli</h1>
+	<h3>Wordpress Cli Development Environment</h3>
 </div>
 
 

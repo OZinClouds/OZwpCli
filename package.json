@@ -1,13 +1,13 @@
 {
-  "name": "wpdevdash",
+  "name": "ozwpcli",
   "version": "1.0.0",
-  "description": "Wordpress Development Dashboard for localhosts",
+  "description": "Wordpress Cli Development Dashboard for localhosts",
   "main": "./src/theme.js",
   "scripts": {
     "start": "npm run build",
-    "build": "webpack --env.browser=' ' ",
+    "build": "webpack --env.browser='' ",
     "safari": "webpack --env.browser=safari --watch",
-    "chrome": "webpack --env.browser='' --watch"
+    "chrome": "webpack --env.browser=chrome --watch"
   },
   "author": "ozinclouds",
   "license": "MIT",

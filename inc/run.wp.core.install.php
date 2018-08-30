@@ -16,7 +16,7 @@
 			$cmd.= " --admin_user=" . $_POST["usr"];
 			$cmd.= " --admin_email=" . $_POST["email"];
 			$cmd.= " --admin_password=" . $_POST["pass"];
-			$cmd.= " --title='newWP by OZwpDev'";
+			$cmd.= " --title='newWP by OZwpCli'";
 			$cmd.= " --url=" . rooturl . "/" . $_POST["wpName"];
 			$result = OZbash::Terminal($cmd);
 

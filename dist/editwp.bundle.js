@@ -2932,7 +2932,7 @@ return jQuery.tablesorter;
 function swal_backup(wpPath, DBname){
 	swal({
 		title:"backup WP",
-		text: "WP backup will be both in \n OZwpDev's basedir /tmp folder and \n WP's upload/ozwpdev folder...",
+		text: "WP backup will be both in \n OZwpCli's basedir /tmp folder and \n WP's upload/OZwpCli folder...",
 		icon: "warning",
 		closeOnClickOutside: false,
 		dangerMode: true,
@@ -3091,7 +3091,7 @@ $(document).ready(function(){
 		if($("#select_wp").val()!=="0"){
 			if(Object(__WEBPACK_IMPORTED_MODULE_0__run_wp_lock_js__["a" /* runWPlock */])($("#select_wp").val(), "status")){
 				$("#btn_del_wp").prop("disabled", true)
-				.attr("title", "you cannot delete this wp \n ozwpdev.txt must exists in the wp folder...")
+				.attr("title", "you cannot delete this wp \n ozwpcli.txt must exists in the wp folder...")
 				
 
 			}
@@ -4326,8 +4326,8 @@ function runDBdelete(dbNAME){
 function runDBexport(wpPath, DBname, export_path="tmp"){
 /*********************** 
 export_path is can be 
-	"tmp" = ozwpdev basedir/tmp 
-	"wp" =wpPath/wp-content/uploads/ozwpdev
+	"tmp" = OZwpCli basedir/tmp 
+	"wp" =wpPath/wp-content/uploads/ozwpcli
 	or a specific path 
 	if path does not exists, mkdir cmd creates folder
  ***********************/
@@ -4457,9 +4457,9 @@ function runWPlock(wpName, lock){
 	/*** 
 	wpName is the folder name in the root dir
 	lock=status returns if the wp install locked or not
-	locked status = true means there is no ozwpdev.txt in root dir
-	locked status = false means there is ozwpdev.txt in root dir and can be modified
-	to set or unlik ozwpdev.txt assign lock = lock / unlock (unlock means free modify)
+	locked status = true means there is no ozwpcli.txt in root dir
+	locked status = false means there is ozwpcli.txt in root dir and can be modified
+	to set or unlik ozwpcli.txt assign lock = lock / unlock (unlock means free modify)
  	***/
 
 	var status=false;

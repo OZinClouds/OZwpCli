@@ -2,7 +2,7 @@
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg fixed-top palet-<?php echo $palet_name?>" id="mainNav">
 		
-		<a class="navbar-brand" href="<?php echo siteurl;?>">OZwpDeV</a>
+		<a class="navbar-brand" href="<?php echo siteurl;?>">OZwpCli</a>
 		
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="fa fa-wordpress"></span>

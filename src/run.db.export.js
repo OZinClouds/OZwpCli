@@ -1,8 +1,8 @@
 export function runDBexport(wpPath, DBname, export_path="tmp"){
 /*********************** 
 export_path is can be 
-	"tmp" = ozwpdev basedir/tmp 
-	"wp" =wpPath/wp-content/uploads/ozwpdev
+	"tmp" = OZwpCli basedir/tmp 
+	"wp" =wpPath/wp-content/uploads/ozwpcli
 	or a specific path 
 	if path does not exists, mkdir cmd creates folder
  ***********************/

@@ -24,7 +24,7 @@
 			if($export_path=="tmp"){
 				$export_path=basedir."tmp";
 			} elseif ($export_path=="wp") {
-				$export_path=$_POST["wpPath"] ."/wp-content/uploads/ozwpdev";
+				$export_path=$_POST["wpPath"] ."/wp-content/uploads/ozwpcli";
 			} 
 			
 			if(!file_exists($export_path)){
@@ -54,8 +54,8 @@
 		
 		/*********************** run with run.db.export.js :: runDBcreate(wpPath, dbNAME, export_path) method 
 				export_path is can be 
-					"tmp" = ozwpdev basedir/tmp 
-					"wp" =wpPath/wp-content/uploads/ozwpdev
+					"tmp" = OZwpCli basedir/tmp 
+					"wp" =wpPath/wp-content/uploads/ozwpcli
 					or a specific path 
 					if path does not exists, mkdir cmd creates folder
 		***********************/	

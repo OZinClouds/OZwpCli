@@ -3,9 +3,9 @@ export function runWPlock(wpName, lock){
 	/*** 
 	wpName is the folder name in the root dir
 	lock=status returns if the wp install locked or not
-	locked status = true means there is no ozwpdev.txt in root dir
-	locked status = false means there is ozwpdev.txt in root dir and can be modified
-	to set or unlik ozwpdev.txt assign lock = lock / unlock (unlock means free modify)
+	locked status = true means there is no ozwpcli.txt in root dir
+	locked status = false means there is ozwpcli.txt in root dir and can be modified
+	to set or unlik ozwpcli.txt assign lock = lock / unlock (unlock means free modify)
  	***/
 
 	var status=false;
